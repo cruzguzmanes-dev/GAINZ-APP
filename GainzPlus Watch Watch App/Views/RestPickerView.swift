@@ -3,17 +3,55 @@ import Foundation
 
 struct RestPickerView: View {
     @ObservedObject var vm: SessionViewModel
+    @StateObject private var packStore    = PackStore.shared
+    @StateObject private var connectivity = ConnectivityService.shared
+
     @State private var showCustomPicker = false
-    @State private var customMinutes = 1
-    @State private var customSeconds = 0
+    @State private var customMinutes    = 1
+    @State private var customSeconds    = 0
     @State private var tappedOption: Int? = nil
+    @State private var isRefreshing      = false
 
     private let options = [30, 60, 90, 120, 180]
-    private let accent = Color(red: 0.78, green: 0.96, blue: 0.35)
+    private let accent  = Color(red: 0.78, green: 0.96, blue: 0.35)
 
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
+
+                // ── Pack activo + botón refresh ──────────────────────────────
+                HStack(spacing: 6) {
+                    Text(packStore.activePack?.emoji ?? "📦")
+                        .font(.system(size: 14))
+                    Text(packStore.activePack?.title ?? "Sin pack")
+                        .font(.system(.caption2, design: .monospaced))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                    Spacer(minLength: 0)
+                    Button {
+                        isRefreshing = true
+                        connectivity.requestPacksFromPhone()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            isRefreshing = false
+                        }
+                    } label: {
+                        if isRefreshing {
+                            ProgressView()
+                                .progressViewStyle(.circular)
+                                .scaleEffect(0.5)
+                                .tint(accent)
+                        } else {
+                            Image(systemName: "arrow.clockwise")
+                                .font(.system(size: 11, weight: .semibold))
+                                .foregroundStyle(connectivity.isReachable ? accent : .secondary)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(isRefreshing)
+                }
+                .padding(.horizontal, 4)
+                .padding(.bottom, 2)
+
                 // Opciones predefinidas
                 ForEach(options, id: \.self) { secs in
                     let isSelected = tappedOption == secs

@@ -10,7 +10,18 @@
 		EE34B1332F5FEB7200BB8C90 /* PROJECT_CONTEXT.md in Resources */ = {isa = PBXBuildFile; fileRef = EE34B1322F5FEB7200BB8C90 /* PROJECT_CONTEXT.md */; };
 		EE9366382F5A8C54007EDD5C /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9366372F5A8C54007EDD5C /* WatchConnectivity.framework */; platformFilters = (ios, xros, ); };
 		EE93663E2F5A8E24007EDD5C /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93663D2F5A8E24007EDD5C /* WatchConnectivity.framework */; };
+		EEF06F052F61636E008EF4CB /* GainzPlus Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EEC6A1F42F5A7506001BE15A /* GainzPlus Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEF06F062F6163F7008EF4CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC6A1D72F5A716E001BE15A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC6A1F32F5A7506001BE15A;
+			remoteInfo = "GainzPlus Watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EEC6A2412F5A861B001BE15A /* Embed Watch Content */ = {
@@ -19,6 +30,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				EEF06F052F61636E008EF4CB /* GainzPlus Watch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +56,7 @@
 		EEC6A2332F5A7882001BE15A /* Exceptions for "GainzPlus" folder in "GainzPlus Watch Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Shared/Config.swift,
 				Shared/Extensions.swift,
 				Shared/Models/Card.swift,
 				Shared/Models/Pack.swift,
@@ -51,7 +64,9 @@
 				Shared/Services/ConnectivityService.swift,
 				Shared/Services/DefaultPacks.swift,
 				Shared/Services/PackStore.swift,
+				"Shared/Services/PackStore+Supabase.swift",
 				Shared/Services/SessionStore.swift,
+				Shared/Services/SupabaseService.swift,
 			);
 			target = EEC6A1F32F5A7506001BE15A /* GainzPlus Watch Watch App */;
 		};
@@ -138,6 +153,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EEF06F072F6163F7008EF4CB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EEC6A1E12F5A716E001BE15A /* GainzPlus */,
@@ -243,6 +259,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEF06F072F6163F7008EF4CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC6A1F32F5A7506001BE15A /* GainzPlus Watch Watch App */;
+			targetProxy = EEF06F062F6163F7008EF4CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EEC6A1E82F5A716E001BE15A /* Debug */ = {
@@ -464,13 +488,12 @@
 				INFOPLIST_FILE = "GainzPlus-Watch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GainzPlus Watch";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UZU.GainzPlus-Watch.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UZU.GainzPlus.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -498,13 +521,12 @@
 				INFOPLIST_FILE = "GainzPlus-Watch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GainzPlus Watch";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UZU.GainzPlus-Watch.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UZU.GainzPlus.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

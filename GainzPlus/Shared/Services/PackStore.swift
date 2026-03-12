@@ -8,6 +8,15 @@ final class PackStore: ObservableObject {
     @Published var packs: [Pack] = []
     @Published var activePack: Pack?
 
+    // MARK: - Sync state
+    enum SyncState: Equatable {
+        case idle
+        case loading
+        case success(Date)
+        case error(String)
+    }
+    @Published var syncState: SyncState = .idle
+
     private var shownCardIDs: Set<UUID> = []
     private let userDefaultsKey = "gainzplus.packs"
     private let activePackKey   = "gainzplus.activePack"
@@ -20,6 +29,10 @@ final class PackStore: ObservableObject {
         if activePack == nil {
             activePack = packs.first
         }
+        
+        #if os(iOS)
+        Task { await loadFromSupabase() }
+        #endif
     }
 
     // MARK: - Card vending
@@ -90,7 +103,7 @@ final class PackStore: ObservableObject {
 
     // MARK: - Persistence
 
-    private func saveToDisk() {
+     func saveToDisk() {
         if let data = try? JSONEncoder().encode(packs) {
             UserDefaults.standard.set(data, forKey: userDefaultsKey)
         }

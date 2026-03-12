@@ -2,6 +2,8 @@ import SwiftUI
 
 @main
 struct GainzWatchApp: App {
+    @StateObject private var connectivity = ConnectivityService.shared
+
     var body: some Scene {
         WindowGroup {
             RootView()
