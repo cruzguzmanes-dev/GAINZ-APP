@@ -14,6 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EEC3B1E32F692385003C7F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC6A1D72F5A716E001BE15A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC6A1DE2F5A716E001BE15A;
+			remoteInfo = GainzPlus;
+		};
 		EEF06F062F6163F7008EF4CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EEC6A1D72F5A716E001BE15A /* Project object */;
@@ -41,6 +48,7 @@
 		EE34B1322F5FEB7200BB8C90 /* PROJECT_CONTEXT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PROJECT_CONTEXT.md; sourceTree = "<group>"; };
 		EE9366372F5A8C54007EDD5C /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		EE93663D2F5A8E24007EDD5C /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS26.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		EEC3B1DF2F692385003C7F40 /* GainzPlus Watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GainzPlus Watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC6A1DF2F5A716E001BE15A /* GainzPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC6A1F42F5A7506001BE15A /* GainzPlus Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GainzPlus Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +81,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		EEC3B1E02F692385003C7F40 /* GainzPlus Watch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GainzPlus Watch Watch AppTests";
+			sourceTree = "<group>";
+		};
 		EEC6A1E12F5A716E001BE15A /* GainzPlus */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -90,6 +103,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EEC3B1DC2F692385003C7F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEC6A1DC2F5A716E001BE15A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +135,7 @@
 				EE34B1322F5FEB7200BB8C90 /* PROJECT_CONTEXT.md */,
 				EEC6A1E12F5A716E001BE15A /* GainzPlus */,
 				EEC6A1F82F5A7506001BE15A /* GainzPlus Watch Watch App */,
+				EEC3B1E02F692385003C7F40 /* GainzPlus Watch Watch AppTests */,
 				EEC6A23D2F5A861B001BE15A /* Frameworks */,
 				EEC6A1E02F5A716E001BE15A /* Products */,
 			);
@@ -125,6 +146,7 @@
 			children = (
 				EEC6A1DF2F5A716E001BE15A /* GainzPlus.app */,
 				EEC6A1F42F5A7506001BE15A /* GainzPlus Watch Watch App.app */,
+				EEC3B1DF2F692385003C7F40 /* GainzPlus Watch Watch AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +163,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EEC3B1DE2F692385003C7F40 /* GainzPlus Watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC3B1E52F692385003C7F40 /* Build configuration list for PBXNativeTarget "GainzPlus Watch Watch AppTests" */;
+			buildPhases = (
+				EEC3B1DB2F692385003C7F40 /* Sources */,
+				EEC3B1DC2F692385003C7F40 /* Frameworks */,
+				EEC3B1DD2F692385003C7F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC3B1E42F692385003C7F40 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EEC3B1E02F692385003C7F40 /* GainzPlus Watch Watch AppTests */,
+			);
+			name = "GainzPlus Watch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "GainzPlus Watch Watch AppTests";
+			productReference = EEC3B1DF2F692385003C7F40 /* GainzPlus Watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EEC6A1DE2F5A716E001BE15A /* GainzPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC6A1EA2F5A716E001BE15A /* Build configuration list for PBXNativeTarget "GainzPlus" */;
@@ -197,6 +242,10 @@
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
+					EEC3B1DE2F692385003C7F40 = {
+						CreatedOnToolsVersion = 26.4;
+						TestTargetID = EEC6A1DE2F5A716E001BE15A;
+					};
 					EEC6A1DE2F5A716E001BE15A = {
 						CreatedOnToolsVersion = 26.4;
 					};
@@ -221,11 +270,19 @@
 			targets = (
 				EEC6A1DE2F5A716E001BE15A /* GainzPlus */,
 				EEC6A1F32F5A7506001BE15A /* GainzPlus Watch Watch App */,
+				EEC3B1DE2F692385003C7F40 /* GainzPlus Watch Watch AppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EEC3B1DD2F692385003C7F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEC6A1DD2F5A716E001BE15A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +301,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EEC3B1DB2F692385003C7F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEC6A1DB2F5A716E001BE15A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +325,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EEC3B1E42F692385003C7F40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC6A1DE2F5A716E001BE15A /* GainzPlus */;
+			targetProxy = EEC3B1E32F692385003C7F40 /* PBXContainerItemProxy */;
+		};
 		EEF06F072F6163F7008EF4CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EEC6A1F32F5A7506001BE15A /* GainzPlus Watch Watch App */;
@@ -269,6 +338,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EEC3B1E62F692385003C7F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UFWCPLSTQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UZU.GainzPlus-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GainzPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GainzPlus";
+			};
+			name = Debug;
+		};
+		EEC3B1E72F692385003C7F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UFWCPLSTQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UZU.GainzPlus-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GainzPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GainzPlus";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		EEC6A1E82F5A716E001BE15A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -545,6 +661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EEC3B1E52F692385003C7F40 /* Build configuration list for PBXNativeTarget "GainzPlus Watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC3B1E62F692385003C7F40 /* Debug */,
+				EEC3B1E72F692385003C7F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEC6A1DA2F5A716E001BE15A /* Build configuration list for PBXProject "GainzPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
