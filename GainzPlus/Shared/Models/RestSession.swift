@@ -31,6 +31,15 @@ struct RestSession: Identifiable, Codable {
         self.cardResults = cardResults
     }
 
+    /// Internal init for testing — allows injecting a specific date.
+    init(date: Date, restDuration: Int, packID: UUID?, cardResults: [CardResult] = []) {
+        self.id = UUID()
+        self.date = date
+        self.restDuration = restDuration
+        self.packID = packID
+        self.cardResults = cardResults
+    }
+
     var knownCount: Int { cardResults.filter(\.knew).count }
     var seenCount: Int  { cardResults.count }
 
